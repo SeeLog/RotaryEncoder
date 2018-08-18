@@ -9,6 +9,8 @@ Example program is [here](https://github.com/SeeLog/RotaryEncoder/blob/master/sr
 
 ## Tutorial
 
+![image](https://i.imgur.com/3KIpfHg.png)
+
 ### 1. Copy library files to your project
 - RotaryEncoder.h
 - RotaryEncoder.cpp
