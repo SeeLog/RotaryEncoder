@@ -11,7 +11,7 @@ class RotaryEncoder
         int getRotationValue();
         void setMaxValue(int);
         void setMinValue(int);
-        void setRotationValue();
+        void setRotationValue(int);
         void updateValue();
         void finish();
 

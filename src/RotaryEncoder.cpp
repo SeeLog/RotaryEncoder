@@ -38,6 +38,14 @@ void RotaryEncoder::reset()
 }
 
 /*
+    Set rotation value
+*/
+void RotaryEncoder::setRotationValue(int value)
+{
+    enc_count = min(m_maxval, max(m_minval, value));
+}
+
+/*
     Set maximum value
 */
 void RotaryEncoder::setMaxValue(int maxval)
