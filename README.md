@@ -1,8 +1,11 @@
 # RotaryEncoder library
 RotaryEncoder library for Arduino Uno etc...
 
+I checked the operation with [EC12PLRGBSDVBF-D-25K-24-24C-61](http://akizukidenshi.com/catalog/g/gP-05773/)
+
 Example program is [here](https://github.com/SeeLog/RotaryEncoder/blob/master/src/main.cpp)
-日本語の説明はこちら
+
+日本語の説明は[こちら](https://github.com/SeeLog/RotaryEncoder/blob/master/README.jp.md)
 
 ## Tutorial
 
