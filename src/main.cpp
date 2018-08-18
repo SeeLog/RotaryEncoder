@@ -22,7 +22,7 @@ void setup()
 void loop()
 {
     int val = encoder.getRotationValue();
-    Serial.println(val);
+    Serial.print(String(val) + "    \r");
 
     delay(100);
 }
