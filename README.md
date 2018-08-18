@@ -49,11 +49,11 @@ encoder.setMinValue(0);
 encoder.skipValue = 4;
 ```
 
-If set this, the value will increase `0, 4, 8, ...` and decrease `0, -4, -8, ...`
+If set this, the value will increase to `0, 4, 8, ...` and decrease to `0, -4, -8, ...`
 
 - Value rotation
 ```cpp
 encoder.isRotateValue = true;
 ```
 
-If the max value is 10 and the min value is 0, the value will increase `...,9,10,0,1,...` and decrease `...,1,0,10,9,...`
+If the max value is 10 and the min value is 0, the value will increase to `...,9,10,0,1,...` and decrease to `...,1,0,10,9,...`
