@@ -52,7 +52,7 @@ void RotaryEncoder::setMaxValue(int maxval)
 void RotaryEncoder::setMinValue(int minval)
 {
     m_minval = minval;
-    enc_count = max(enc_count, m_maxval);
+    enc_count = max(enc_count, m_minval);
 }
 
 /*
@@ -143,7 +143,14 @@ void RotaryEncoder::updateValue()
                     }
                     else
                     {
-                        enc_count = (enc_count + skipValue) % (m_maxval + 1);
+                        if (enc_count + skipValue > m_maxval)
+                        {
+                            enc_count = m_minval + (enc_count + skipValue - m_maxval) - 1;
+                        }
+                        else
+                        {
+                            enc_count = enc_count + skipValue;
+                        }
                     }
                 }
                 else if (dir == 3 && old == 1)

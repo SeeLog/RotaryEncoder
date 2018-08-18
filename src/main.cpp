@@ -14,14 +14,13 @@ void setup()
     encoder.isRotateValue = true;
     encoder.setMaxValue(255);
     encoder.setMinValue(0);
-    encoder.skipValue = 7;
+    encoder.skipValue = 3;
 
     Serial.begin(9600);
 }
 
 void loop()
 {
-    // put your main code here, to run repeatedly:
     int val = encoder.getRotationValue();
     Serial.println(val);
 
