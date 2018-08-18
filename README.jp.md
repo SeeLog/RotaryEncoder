@@ -9,6 +9,8 @@
 
 ## チュートリアル
 
+![image](https://i.imgur.com/3KIpfHg.png)
+
 ### 1. プロジェクトのディレクトリに以下のファイルをコピーします
 - RotaryEncoder.h
 - RotaryEncoder.cpp
