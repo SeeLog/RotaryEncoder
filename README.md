@@ -1,7 +1,8 @@
-# RotaryEncoder
+# RotaryEncoder library
 RotaryEncoder library for Arduino Uno etc...
 
-Example program is here
+Example program is [here](https://github.com/SeeLog/RotaryEncoder/blob/master/src/main.cpp)
+日本語の説明はこちら
 
 ## Tutorial
 
