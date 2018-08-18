@@ -43,17 +43,17 @@ encoder.setMaxValue(255);
 encoder.setMinValue(0);
 ```
 
-- Set increase and decrese value
+- Set increase and decrease value
 
 ```cpp
 encoder.skipValue = 4;
 ```
 
-If set this, the value will increse `0, 4, 8, ...` and decrese `0, -4, -8, ...`
+If set this, the value will increase `0, 4, 8, ...` and decrease `0, -4, -8, ...`
 
 - Value rotation
 ```cpp
 encoder.isRotateValue = true;
 ```
 
-If the max value is 10 and the min value is 0, the value will increse `...,9,10,0,1,...` and decrese `...,1,0,10,9,...`
+If the max value is 10 and the min value is 0, the value will increase `...,9,10,0,1,...` and decrease `...,1,0,10,9,...`
