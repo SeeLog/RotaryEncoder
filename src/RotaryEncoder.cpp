@@ -135,21 +135,31 @@ void RotaryEncoder::updateValue()
         {
             if (cur == 0)
             {
+                int skip = skipValue;
+                if (skipValue < 0)
+                {
+                    skip = -skip;
+                    /* swap by xor swap algorithm */
+                    dir = dir ^ old;
+                    old = dir ^ old;
+                    dir = dir ^ old;
+                }
+
                 if (dir == 1 && old == 3)
                 {
                     if (!isRotateValue)
                     {
-                        enc_count = min(enc_count + skipValue, m_maxval);
+                        enc_count = min(enc_count + skip, m_maxval);
                     }
                     else
                     {
-                        if (enc_count + skipValue > m_maxval)
+                        if (enc_count + skip > m_maxval)
                         {
-                            enc_count = m_minval + (enc_count + skipValue - m_maxval) - 1;
+                            enc_count = m_minval + (enc_count + skip - m_maxval) - 1;
                         }
                         else
                         {
-                            enc_count = enc_count + skipValue;
+                            enc_count = enc_count + skip;
                         }
                     }
                 }
@@ -157,20 +167,30 @@ void RotaryEncoder::updateValue()
                 {
                     if (!isRotateValue)
                     {
-                        enc_count = max(enc_count - skipValue, m_minval);
+                        enc_count = max(enc_count - skip, m_minval);
                     }
                     else
                     {
-                        if (enc_count - skipValue < m_minval)
+                        if (enc_count - skip < m_minval)
                         {
-                            enc_count = m_maxval + enc_count - skipValue + 1;
+                            enc_count = m_maxval + enc_count - skip + 1;
                         }
                         else
                         {
-                            enc_count = enc_count - skipValue;
+                            enc_count = enc_count - skip;
                         }
                     }
                 }
+
+                if (skipValue < 0)
+                {
+                    skip = -skip;
+                    /* swap by xor swap algorithm */
+                    dir = dir ^ old;
+                    old = dir ^ old;
+                    dir = dir ^ old;
+                }
+
                 dir = 0;
             }
         }
